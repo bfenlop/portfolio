@@ -1,0 +1,546 @@
+/* Variables */
+:root {
+  --background-color: #ffffff;
+  --circle-color: #ddd;
+  --circle-hover-color: #0563bb;
+  --circle-active-color: #0563bb;
+  --text-color: #333;
+  --font-body: 'Roboto', sans-serif;
+}
+
+/* General */
+body {
+  font-family: var(--font-body);
+  margin: 0;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding-left: 80px; /* Adjustment to avoid overlap with the side menu */
+}
+
+/* Section Titles */
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: var(--text-color);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+/* Circular Menu */
+.circle-menu {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-item {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.menu-item .circle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--circle-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.menu-item .circle i {
+  position: relative;
+  z-index: 2;
+  font-size: 24px;
+}
+
+.menu-item .circle span {
+  position: absolute;
+  left: 100%;
+  font-size: 14px;
+  color: white;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, left 0.3s ease;
+}
+
+.menu-item:hover .circle {
+  width: 130px;
+  height: 60px;
+  border-radius: 30px;
+  padding: 0 15px;
+  background: var(--circle-hover-color);
+  color: white;
+  justify-content: flex-start;
+}
+
+.menu-item:hover .circle i {
+  margin-right: 10px;
+}
+
+.menu-item:hover .circle span {
+  opacity: 1;
+  visibility: visible;
+  left: 50px;
+}
+
+.menu-item.active .circle {
+  background: var(--circle-active-color);
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+  padding: 100px 0; /* Adjustment to better center the content vertically */
+  background-color: #fff; /* White background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* The section takes up the full screen height */
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .col-lg-6 {
+  flex: 1;
+  padding: 20px;
+}
+
+.hero .col-lg-6.text-left {
+  text-align: left; /* Align text to the left in the first column */
+}
+
+.hero .col-lg-6.text-center {
+  text-align: center; /* Center the image in the second column */
+}
+
+.hero h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  color: #333;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #0563bb;
+}
+
+.hero img{
+  width: 400px; /* Fixed width for the image, adjustable */
+  height: 400px; /* Fixed height to make it circular */
+  border-radius: 50%; /* Makes the image round */
+  object-fit: cover; /* Ensures the image covers the circular area without distortion */
+  margin-top: 20px; /* Optional: adds space between the text and the image */
+}
+
+/* Adjustment to avoid overlap */
+main {
+  margin-left: 100px; /* Adjust according to the width of the side menu */
+  padding: 20px;
+}
+
+.section {
+  padding: 20px 0;
+}
+
+/* Ensure other sections have a white background */
+section {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Adjustment to align the photo with the text */
+.photo-container {
+  padding-left: 20px 0; /* Same as the body padding for alignment */
+}
+
+/* Justify text */
+#about p {
+  text-align: justify;
+}
+.highlight {
+  color: #000000; /* Dark blue text */
+  font-weight: bold;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+/* Education Section */
+#education {
+  padding: 50px 0;
+}
+
+#education p {
+  text-align: justify;
+}
+
+.accordion-item {
+  margin-bottom: 50px;
+}
+
+/* Default style for all accordion buttons */
+.accordion-button {
+  background-color: transparent !important;  /* Transparent background */
+  border: 2px solid #ccc;  /* Light gray border */
+  color: #000;  /* Text color */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Style when the accordion is collapsed (not expanded) */
+.accordion-button.collapsed {
+  background-color: transparent !important;
+  border-color: #ccc;  /* Light gray border */
+}
+
+/* Style when the accordion expands (clicked) */
+.accordion-button:not(.collapsed) {
+  background-color: #ffffff !important;  /* Blue background when expanded */
+  color: black;  /* Black text when expanded */
+}
+
+/* Highlight border and background when hovering over collapsed buttons */
+.accordion-button.collapsed:hover {
+  border-color: #0563bb;  /* Blue border when hovered */
+}
+
+/* Highlight border and background when hovering over expanded buttons */
+.accordion-button:hover {
+  background-color: #f1f1f1 !important;  /* Light gray background when hovered */
+  border-color: #0563bb;  /* Blue border when hovered */
+}
+
+/* Style for table header cells */
+.table th {
+  background-color: #0563bb;  /* Blue */
+  color: white;  /* White text */
+}
+
+.img-fluid-education {
+  max-width: 100%;  /* Ensures the image does not overflow */
+  height: auto;     /* Maintains image proportions */
+  max-height: 300px; /* Adjust this value as needed */
+  float: right;
+}
+
+.language-photos {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.language {
+  display: flex;
+  flex-direction: column; /* Places the image and text in a column */
+  align-items: center; /* Centers the image and text horizontally */
+  text-align: center; /* Centers the text below the image */
+}
+
+.language img {
+  width: 200px; /* Adjust the size of the flags */
+  height: 200px;
+  object-fit: cover; /* Ensures the image crops well if necessary */
+}
+
+.language p {
+  margin-top: 10px; /* Space between the image and the text */
+  font-size: 14px; /* Adjust text size as desired */
+  font-weight: 600; /* Makes the text slightly bolder */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-8, .col-md-4 {
+  flex: 1;
+  margin: 10px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* General style for the skills section */
+#skills {
+  padding: 40px 0;
+}
+
+.skill-item {
+  margin-bottom: 30px;
+}
+
+.skill-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.skill-percentage {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Custom progress bar */
+.progress {
+  height: 10px;
+  background-color: #e0e0e0;
+}
+
+.progress-bar {
+  background-color: #0563bb;
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+/* Flexbox for the icon and texts */
+.d-flex {
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-6 {
+  margin-bottom: 30px;
+}
+
+/* General styles for the projects section */
+#projects {
+  padding: 50px 0;
+}
+
+/* Card styles */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on cards */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Card image */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Card body */
+.card-body {
+  padding: 20px;
+  text-align: left;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* "Show More" button */
+.card-footer .btn {
+  width: 100%;
+  background-color: #0563bb;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.card-footer .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Modal content */
+.modal-content {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Modal header */
+.modal-header {
+  border-bottom: 2px solid #0056b3;
+}
+
+.modal-title {
+  font-size: 1.8rem;
+  color: #0056b3;
+}
+
+/* Images in the modal */
+.modal-body img {
+  max-height: 250px; /* Adjust maximum size for images */
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+}
+
+/* List in the modal */
+.modal-body ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+.modal-body ul li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-body img {
+    max-height: 150px; /* Reduce image size on smaller screens */
+  }
+
+  .modal-title {
+    font-size: 1.5rem; /* Smaller title size on smaller screens */
+  }
+}
+
+/* General styles for Work Experience */
+#work img {
+  max-width: 80%;
+  border-radius: 10px;
+}
+
+#work .row {
+  margin-bottom: 30px;
+}
+
+#work h4 {
+  color: #333; /* Dark text for titles */
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#work p {
+  text-align: justify;
+  font-size: 16px;
+}
+
+#work .highlight {
+  color: #0563bb;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#work .highlight:hover {
+  color: #034c89;
+}
+
+/* Horizontal Line Between Experiences */
+.work-divider {
+  border: 0;
+  height: 2px;
+  background: #0563bb; /* Highlight blue */
+  margin: 40px 0; /* Add spacing above and below */
+  opacity: 0.7; /* Slight transparency */
+}
+
+#contact ul {
+  padding-left: 0;
+}
+
+#contact ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+#contact ul li i {
+  color: #0563bb;
+  margin-right: 10px;
+}
+
+.social-media a {
+  margin-right: 20px; /* Adjust this value as preferred */
+  color: #333;
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  color: #0451a1;
+}
+
+#contactForm button {
+  background-color: #0563bb;
+  border-color: #0563bb;
+}
+
+#contactForm button:hover {
+  background-color: #0451a1;
+  border-color: #0451a1;
+}
+
+#successMessage {
+  font-weight: bold;
+}
+
+.contact-photo img {
+  border-radius: 50%; /* Makes the image circular */
+  width: 100%; /* Ensures it fits the container */
+  max-width: 225px; /* Adjust maximum size as preferred */
+  height: auto;
+}
