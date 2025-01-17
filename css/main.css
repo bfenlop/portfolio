@@ -479,6 +479,7 @@ section {
 #work p {
   text-align: justify;
   font-size: 16px;
+  margin-bottom: 10px;
 }
 
 #work .highlight {
@@ -496,7 +497,7 @@ section {
   border: 0;
   height: 2px;
   background: #0563bb; /* Highlight blue */
-  margin: 30px 0; /* Add spacing above and below */
+  margin: 25px 0; /* Add spacing above and below */
   opacity: 0.7; /* Slight transparency */
 }
 
@@ -543,4 +544,13 @@ section {
   width: 100%; /* Ensures it fits the container */
   max-width: 225px; /* Adjust maximum size as preferred */
   height: auto;
+}
+
+.img-fotofinal {
+  max-width: 100%;  /* Ensures the image does not overflow */
+  max-height: 300px; 
+}
+
+#contact {
+  margin-bottom: 50px; /* Espacio externo debajo de la sección Contact */
 }
