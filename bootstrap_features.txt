@@ -1,0 +1,44 @@
+Here is a list of Bootstrap features used in the HTML file:
+
+Bootstrap CSS and JS:
+Included Bootstrap 5.3.3 CSS (bootstrap.min.css) for styling.
+Included Bootstrap JS (bootstrap.bundle.min.js) for interactive components.
+
+Bootstrap Icons:
+Integrated Bootstrap Icons (bootstrap-icons.min.css) for iconography.
+
+Grid System:
+Used Bootstrap's grid system with classes like .container, .row, .col-md-*, and .col-lg-*.
+
+Typography:
+Standard Bootstrap typography styling (e.g., headings, paragraphs, etc.).
+
+Buttons:
+Button classes like .btn and .btn-primary.
+
+Accordion:
+Created expandable sections for the Education section using the accordion component.
+
+Progress Bars:
+Used .progress and .progress-bar classes for skill-level indicators.
+
+Cards:
+Used the card component for the Projects section, including .card, .card-body, and .card-footer.
+
+Icons:
+Incorporated icons from Bootstrap Icons with classes like bi bi-house, bi bi-person, etc.
+
+Forms:
+Used form elements with classes like .form-control and .form-select for the Contact section.
+
+Modals:
+Used the Modal component (.modal, .modal-dialog, .modal-content) for detailed project descriptions.
+
+Responsive Utilities:
+Applied responsive classes like d-flex, align-items-center, justify-content-center, etc., for layout adjustments.
+
+Navigation:
+Circular menu structure using .circle-menu with .menu-item styled interactively.
+
+Images:
+Used .img-fluid to ensure images are responsive.
