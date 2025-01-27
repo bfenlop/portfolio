@@ -152,6 +152,37 @@ h2 {
   margin-bottom: 20px;
 }
 
+/* Estilo para el botón */
+.btn {
+  display: inline-block;
+  background-color: #ffffff; /* Azul primario */
+  color: #000000; /* Texto blanco */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid #0056b3;
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Elimina el subrayado */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+  transform: translateY(-2px); /* Efecto de levantamiento */
+}
+
+.btn:active {
+  background-color: #003f7f; /* Azul aún más oscuro al hacer clic */
+  transform: translateY(1px); /* Leve hundimiento */
+}
+
+.btn:focus {
+  outline: 2px solid #80bdff; /* Contorno azul claro para accesibilidad */
+  outline-offset: 2px;
+}
+
+
 .hero p {
   font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
