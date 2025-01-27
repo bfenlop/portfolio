@@ -153,7 +153,7 @@ h2 {
 }
 
 /* Estilo para el botón */
-.btn {
+.btn_hero {
   display: inline-block;
   background-color: #ffffff; /* Azul primario */
   color: #000000; /* Texto blanco */
@@ -167,17 +167,17 @@ h2 {
   transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
 }
 
-.btn:hover {
+.btn_hero:hover {
   background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
   transform: translateY(-2px); /* Efecto de levantamiento */
 }
 
-.btn:active {
+.btn_hero:active {
   background-color: #003f7f; /* Azul aún más oscuro al hacer clic */
   transform: translateY(1px); /* Leve hundimiento */
 }
 
-.btn:focus {
+.btn_hero:focus {
   outline: 2px solid #80bdff; /* Contorno azul claro para accesibilidad */
   outline-offset: 2px;
 }
