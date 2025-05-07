@@ -32,17 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Smooth scrolling when clicking on a link
-  document.querySelectorAll(".menu-item a").forEach((link) => {
-    link.addEventListener("click", (event) => {
+  menuItems.forEach((item) => {
+    item.addEventListener("click", (event) => {
       event.preventDefault();
-      const targetId = link.getAttribute("href").substring(1);
+      const targetId = item.getAttribute("href").substring(1);
       const targetSection = document.getElementById(targetId);
 
       if (targetSection) {
-        window.scrollTo({
-          top: targetSection.offsetTop - 20, // Ajusta el desplazamiento si es necesario
-          behavior: "smooth",
-        });
+        targetSection.scrollIntoView({ behavior: "smooth" });
       }
     });
   });

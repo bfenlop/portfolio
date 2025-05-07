@@ -164,12 +164,13 @@ h2 {
   border-radius: 5px; /* Bordes redondeados */
   text-decoration: none; /* Elimina el subrayado */
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+  transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease; /* Transición suave */
 }
 
 .btn_hero:hover {
   background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
   transform: translateY(-2px); /* Efecto de levantamiento */
+  color: #ffffff; /* Texto blanco al hacer hover */
 }
 
 .btn_hero:active {
@@ -208,20 +209,35 @@ h2 {
   margin-top: 20px; /* Optional: adds space between the text and the image */
 }
 
-/* Adjustment to avoid overlap */
+/* Main container styles */
 main {
-  margin-left: 100px; /* Adjust according to the width of the side menu */
-  padding: 20px;
+  margin-left: 100px; /* Space for fixed menu */
 }
 
+/* Section styles */
 .section {
-  padding: 20px 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 0;
+  scroll-margin-top: 20px;
 }
 
-/* Ensure other sections have a white background */
+/* Section background and spacing */
 section {
   background-color: var(--background-color);
   color: var(--text-color);
+  padding: 0;
+  position: relative;
+}
+
+/* Container styles for sections */
+section .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* Adjustment to align the photo with the text */
