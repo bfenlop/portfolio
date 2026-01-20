@@ -601,3 +601,10 @@ section .container {
 #contact {
   margin-bottom: 50px; /* Espacio externo debajo de la sección Contact */
 }
+
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
